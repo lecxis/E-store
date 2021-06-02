@@ -159,7 +159,6 @@ cont.onclick=function(){
 var checkout= document.querySelector('#checkout');
 checkout.onclick=function(){
     payWithPaystack();
-    insertSummaryItems();
     document.querySelector('.form').style.display="none";
 }
 
@@ -182,6 +181,11 @@ close.onclick=function(){
             totalAmount=0;
     document.querySelector('.cash').innerHTML=totalAmount;
     document.querySelector('.number').innerHTML=products.length;
+    //clear summary table
+    var rowCount = summaryTable.rows.length;
+    for (var i= rowCount-1; i>0; i--){
+        table.deleteRow(i);
+    }
 }
 function updateSummaryTable(index, name, quantity){
     var tr= summaryTable.insertRow(-1);
@@ -209,6 +213,7 @@ function payWithPaystack() {
       callback: function(response){
         let message = 'Payment complete! Reference: ' + response.reference;
         alert(message);
+        insertSummaryItems();
         document.querySelector('.summary').style.display="block";
       }
     });
