@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+        <main>
+        <header>
+            <div class="logo">
+                <p>EMS</p>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#"> Intro</a></li>
+                    <li><a href="#about"> About</a></li>
+                    <li><a href="#gadgets"> Shop</a></li>
+                </ul>
+            </div>
+            <div class="cart">
+                <div class="icon">
+                    <i class="fa fa-shopping-cart"></i>
+                </div>
+                <div class="number">
+                    0
+                </div>
+            </div>
+        </header>
+        <div class="form">
+            <div class="table">
+                <table id="table">
+                <thead>
+                <tr>
+                    <th> S/N</th>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th> Quantity</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+                </table>
+            </div>
+            <form>
+                <div class="input-group">
+                <input type="text" placeholder="Full Name" required class="name" id='name'>
+                <input type="text" placeholder="Your Email" required class="e-mail" id="email-address">
+                <input type="number" placeholder="Your Phone Number" required id="phone-number">
+                </div>
+           
+
+            <div class="amount">
+                <p class="amount-label">Total Amount to be Paid</p>
+                <p class="amount-cash">₦<span class="cash">0 </span></p>
+            </div>
+            <div class="but">
+                <button class="continue"> Continue Shopping</button>
+                <button class="checkout" id="checkout" type="submit"> Checkout</button>
+            </div>
+        </form>
+        </div>
+        <div class="summary">
+            <p class="summary-text"> Thank You, <span id="getName"> </span>,Your Order Has been Received</p>
+            <img src="img/check.svg" alt="Summary mage">
+            <p class="sum"> Summary</p>
+            <table id="summary-table">
+                <thead>
+                <tr>
+                    <th> S/N</th>
+                    <th>Item</th>
+                    <th> Quantity</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <button class="summary-btn">Ok</button>
+        </div>
+
+        <div class="intro-body">
+            <div class="content">
+                <div class="store-name">
+                    <p>THE</p>
+                    <p>E-MILLENIAL</p>
+                    <P>STORE</P>
+                </div>
+                <div class="store-pic">
+                    <img src="img/heroImage.png" alt="Image of store">
+                </div>
+            </div>
+        <a href="#gadgets"> <div class="shop-button">
+                <p>SHOP NOW</p>
+            </div></a>
+        </div>
+        <section id="about" class="about">
+            <!--<h1> ABOUT US</h1> -->
+            <p> E-Millenial Store is an hypothetical online store for 
+                gadgets we believe every 'Millenial' or 'Gen-Z' should
+                have today. We've got mobile phones, laptops, smartwatches
+                and other gadgets. Explore all our gadgets and choose the ones that
+                suit you.
+
+            </p>
+        </section>
+        <section id="gadgets" class="gadgets">
+            <h1> OUR GADGETS</h1>
+            <div class="items">
+                <div class="item">
+                    <img src="img/product1.png" alt="Samsung TV">
+                    <div class="price"> 
+                        <p class="pri"> Price</p>
+                        <p class="amount">₦300,000</p>
+                        
+                    </div>
+                    <div class="label"> SAMSUNG TV</div>
+                    <div class="cart-button" >ADD TO CART</div>
+                    <div class="remove-cart">Remove Item</div>
+                </div>
+                <div class="item">
+                    <img src="img/product2.png" alt="Samsung TV">
+                    <div class="price"> 
+                        <p class="pri"> Price</p>
+                        <p class="amount">₦200,000</p>
+                        
+                    </div>
+                    <div class="label"> PIXEL 4a</div>
+                    <div class="cart-button">ADD TO CART</div>
+                    <div class="remove-cart">Remove Item</div>
+                </div>
+                <div class="item">
+                    <img src="img/product3.png" alt="Samsung TV">
+                    <div class="price"> 
+                        <p class="pri"> Price</p>
+                        <p class="amount">₦350,000</p>
+                        
+                    </div>
+                    <div class="label"> PS 5</div>
+                    <div class="cart-button">ADD TO CART</div>
+                    <div class="remove-cart">Remove Item</div>
+                </div>
+                <div class="item">
+                    <img src="img/product4.png" alt="Samsung TV">
+                    <div class="price"> 
+                        <p class="pri"> Price</p>
+                        <p class="amount">₦500,000</p>
+                        
+                    </div>
+                    <div class="label">APPLE AIR</div>
+                    <div class="cart-button">ADD TO CART</div>
+                    <div class="remove-cart">Remove Item</div>
+                </div>
+                <div class="item">
+                    <img src="img/product5.png" alt="Samsung TV">
+                    <div class="price"> 
+                        <p class="pri"> Price</p>
+                        <p class="amount">₦150,000</p>
+                        
+                    </div>
+                    <div class="label">APPLE WATCH</div>
+                    <div class="cart-button">ADD TO CART</div>
+                    <div class="remove-cart">Remove Item</div>
+                </div>
+                <div class="item">
+                    <img src="img/product6.png" alt="Samsung TV">
+                    <div class="price"> 
+                        <p class="pri"> Price</p>
+                        <p class="amount">₦100,000</p>
+                        
+                    </div>
+                    <div class="label"> AIR PODS</div>
+                    <div class="cart-button">ADD TO CART</div>
+                    <div class="remove-cart">Remove Item</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="logo">
+            <p>EMS</p>
+        </div>
+        <div class="foot-note">
+            <p>Designed and Crafted by a Olalekan</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://js.paystack.co/v1/inline.js"></script>  
+    </body>
+</html>

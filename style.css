@@ -1,0 +1,517 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+main{
+    
+}
+
+header, .intro-body, .about, footer {
+   
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 20px;
+    
+}
+header{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+header, .intro-body{
+    background: #FFE9D6;
+}
+.intro-body{
+padding-bottom: 20px;
+}
+.logo{
+    background: #FF7A00;
+    color: #FFE9D6;
+    padding: 5px;
+    display: inline-block;
+}
+.logo p{
+    font-family:  Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+}
+.nav{
+    padding-top: 18px;
+    display: inline-block;
+    margin-left: 25%; 
+    padding-left: 0;
+    padding-right: 0;
+    
+}
+.nav ul{
+    padding-left:0;
+    padding-right: 0;
+}
+
+.nav ul li{
+    display:inline;
+    padding-left: 0px;
+    padding-right: 30px;
+    font-weight: bold;
+    font-size: 20px;
+}
+ a{
+    text-decoration: none;
+    color: black;
+}
+
+.cart{
+    background:#FF9A3D ;
+    border-radius: 25px;
+    color: #FFE9D6;
+    float: right;
+    /*margin-left: 20%;*/
+}
+.cart .number, .cart .icon{
+    font-size: 30px;
+    display: inline;
+    padding: 5px;
+}
+/* form style*/
+.form,.summary{
+    display: none;
+    width: 54%;
+    margin: auto;
+    background: white;
+    position: absolute;
+    left:23%;
+    top:2%;
+}
+
+.table{
+    overflow-x:auto;
+}
+th, td{
+    padding:15px;
+    font-size: 15px;
+}
+.quantity{
+display: flex;
+font-size: 13px;
+}
+.quantity button{
+    font-size: 8px;  
+    font-weight: 600;
+    background: #FF7A00;
+    color: #FFE9D6;
+    border-radius: 6px;
+    border:none;
+}
+.quantity  p{
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.remove{
+    background: #FF9A3D;
+    border-radius: 6px;
+    border:none;
+    font-weight: 600;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 50px 5px 50px;
+}
+.input-group input{
+    margin: 0 0 20px 0;  
+    background: #FFE9D6;
+}
+.form .amount{
+width: 50%;
+margin:auto;
+text-align: center;
+margin-bottom: 20px;
+}
+.amount .amount-label{
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 20px;
+}
+.amount .amount-cash{
+    font-weight: 700;
+    font-size: 20px;
+}
+.but{
+    text-align: right;
+}
+.but button{
+    height: 40px;
+    font-size:12px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    background: #FFE9D6;
+}
+.but .checkout{
+    background: #FF9A3D; 
+}
+
+/* Summary modal poage*/
+.summary{
+  z-index: 10;  
+}
+.summary p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+font-weight: 600;
+text-align: center;
+}
+.summary p span{
+    color: #FFE9D6;
+}
+
+.summary img{
+    display:block;
+    width: 100px; 
+   margin-left: auto;
+   margin-right: auto;
+}
+.summary .summary-btn{
+    height: 30px;
+    font-size:12px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #FFE9D6;
+    background: #FF9A3D;  
+    float: right; 
+}
+#getName{
+color: red;
+font-weight: bold;
+}
+/* main part of the intro*/
+
+.intro-body .content{
+    display: flex;
+}
+ .store-name{
+    font-size: 50px;
+    font-family:  Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: #FF7A00;
+    text-align:left;
+    margin-top: 95px;   
+}
+.store-name p {
+    white-space: nowrap;
+}
+.intro-body .store-pic img{
+    max-width: 100%;
+    height:auto;
+}
+
+.shop-button{
+    background:#FF9A3D ;
+    color: #FFE9D6;
+    width: 35%;
+    margin: auto;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    font-size: 20px;
+    font-family:  Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    border-radius: 10px;  
+}
+
+/* About us*/
+.about{
+    
+    padding-top: 5%;
+    padding-bottom: 20px;
+    background: black;
+}
+.about h1{
+text-align: center;
+font-family:  Tahoma, Geneva, Verdana, sans-serif;
+font-weight: bold;
+color: snow;
+}
+.about p{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Our Gadgets*/
+.gadgets{
+    
+    padding: 5% 6% 20% 9%;
+    background:white;
+    
+}
+.gadgets h1{
+    text-align: center;
+    font-family:  Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    }
+
+    .gadgets .items{
+        display: flex;
+        margin-top: 30px;
+        padding:0;
+        width: 100%;
+        flex-wrap: wrap;
+       
+    }
+    .items .item{
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 50px;
+       
+        width: 230px;
+        position: relative;
+    }
+
+    .item img{
+        max-width: 100%;
+        height: auto;  
+    }
+    .item .price{
+        display: none;
+    }
+    .item img:hover + .price{
+        display: block;
+        background: black;
+        opacity:0.5;
+        width:inherit;
+        height: 70%;
+        position: absolute;
+        top:0;
+        left: 0;
+    }
+    .item .price p{
+        color: white;
+        font-size: 30px;
+    }
+    .item .price .pri{
+        text-decoration: underline;
+        margin-top: 50px;
+        text-align: center;
+    }
+    .item .price .amount{
+        margin-top: 50px;
+        text-align: center;
+    }
+    .gadgets .items .item .label{
+        font-size: 30px;
+        font-weight: bold;
+        font-family:  Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .item .cart-button{
+        background: #FF7A00 ;
+        font-size: 20px;
+        font-weight: bold;
+        font-family:  Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        width: 75%;
+        margin: auto;
+        border-radius: 10px;
+        padding: 5px 10px 5px 10px;
+        margin-top: 20px;
+    }
+    .item .remove-cart{
+        background: #FF9A3D ;
+        font-size: 20px;
+        font-weight: bold;
+        font-family:  Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        width: 75%;
+        margin: auto;
+        border-radius: 10px;
+        padding: 5px 10px 5px 10px;
+        margin-top: 20px;
+        display:none;
+
+    }
+
+    /* footer*/
+    footer{
+        background: black;
+        color: white;
+        padding-top: 60px;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    footer .logo{
+        color: black;
+        font-size: 160px;
+    }
+    footer .logo p{
+        font-size: 60px;
+    }
+    footer .foot-note{
+        font-family:  Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        
+    }
+    .foot-note p{
+        text-align:right;
+        padding-top: 30px;
+    }
+
+    /* responsiveness */
+
+    @media (max-width: 991px){
+        header, .intro-body, .about, footer {
+            padding-left: 8%;
+            padding-right: 8%;
+            padding-top: 20px;
+        }
+        .items .item{
+            margin-right: auto;
+            margin-left: auto;
+    }
+   .form, .summary{
+       width:70%;
+       left:10%;
+   }
+   
+    }
+
+    @media (max-width: 850px) and (min-width:833px){
+        .items{
+            justify-content: space-around;
+        }
+    .items .item{
+        margin-right: 5px;
+        margin-left: 5px;
+        }
+       
+    }
+
+    @media (max-width: 815px){
+        header, .intro-body, .about, footer {
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-top: 20px;  
+        }
+        .about p{
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .store-name{
+         font-size: 42px;   
+        }
+      
+       
+        footer .logo p{
+            font-size: 40px;
+        }
+        footer .foot-note{
+            margin-left: 20%;
+        }
+        .form, .summary{
+            width: 80%;
+            left:0%;
+            margin-left: 5%;
+        }
+        
+    }
+    @media (max-width: 650px){
+        .intro-body{
+            padding-top:10px;
+        }
+        .store-name{
+            font-size: 40px;   
+           }
+        .nav{
+            margin-left: 10%;
+           }
+
+        footer .foot-note{
+            margin-left: 7%;
+        }
+        .form, .summary{
+            width: 96%;
+            margin-left: auto;
+            margin-right:auto ;
+        }
+    }
+    @media (max-width: 610px){
+        .intro-body .content{
+            font-size: 35px;
+            display: block;            
+           }
+           .store-name{
+               margin-top: 30px;
+            width: 100%;
+              padding-left: 20%;
+           }
+           .store-pic{
+            width: calc(70% - 5px);
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+           }
+           .gadgets{
+            padding: 5% 1% 20% 1%;
+            
+           }
+           .gadgets .items{
+            justify-content: center;
+           }
+           .items .item{
+            margin-right: 10px;
+            margin-left: 10px;
+    }
+           .gadgets .items .item .label{
+            font-size: 20px;
+           }
+           footer .logo p{
+            font-size: 30px;
+        }
+             
+    }
+    @media (max-width: 505px){
+        .logo p{
+        font-size: 30px;
+        }
+        .nav{
+            margin-left: 5%;
+           }
+        .nav ul li{
+            padding-right: 20px;
+            font-size: 17px;
+            
+        }
+        .shop-button{
+            width:40%;
+            font-size: 15px;
+        }
+        footer .logo p{
+            font-size: 20px;
+        }
+        footer .foot-note{
+            font-size: 15px;
+        }
+        footer .foot-note{
+            margin-left: 4%;
+        }   
+    }
+    .modal{
+        position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        
+        }
