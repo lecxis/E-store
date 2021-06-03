@@ -17,6 +17,8 @@ header, .intro-body, .about, footer {
 header{
     padding-left: 10%;
     padding-right: 10%;
+    display:flex;
+    justify-content: space-between;
 }
 header, .intro-body{
     background: #FFE9D6;
@@ -514,4 +516,24 @@ color: snow;
         background-color: rgb(0,0,0); /* Fallback color */
         background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
         
+        }
+
+        @media (max-width: 409px){
+            .logo p{
+                font-size: 15px;
+                
+            }
+            .icon i, .cart .number{
+                font-size: 20px;
+            }
+            .nav ul li{
+                padding-right: 10px;
+            }
+
+        }
+        @media (max-width: 317px){
+           header .logo {
+               display: none;
+                
+            }
         }
