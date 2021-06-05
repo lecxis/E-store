@@ -315,23 +315,23 @@ color: snow;
     }
     .item .cart-button{
         background: #FF7A00 ;
-        font-size: 20px;
+        font-size: 13px;
         font-weight: bold;
         font-family:  Tahoma, Geneva, Verdana, sans-serif;
         text-align: center;
-        width: 75%;
+        width: 80%;
         margin: auto;
         border-radius: 10px;
         padding: 5px 10px 5px 10px;
         margin-top: 20px;
     }
     .item .remove-cart{
-        background: #FF9A3D ;
-        font-size: 20px;
+        background: #FFE9D6 ;
+        font-size: 13px;
         font-weight: bold;
         font-family:  Tahoma, Geneva, Verdana, sans-serif;
         text-align: center;
-        width: 75%;
+        width: 80%;
         margin: auto;
         border-radius: 10px;
         padding: 5px 10px 5px 10px;

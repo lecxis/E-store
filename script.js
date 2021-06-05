@@ -1,4 +1,4 @@
-console.log('I am alive');
+
 products=[];
 var quantityActive=false;
 var table= document.querySelector('#table');
@@ -20,8 +20,8 @@ for(let but of addCart){
        products.push(product);
        clearTable();
        insertItems();
+
        
-       console.log(products);
        but.style.display="none";
        but.nextElementSibling.style.display="block";
     }
@@ -81,7 +81,7 @@ var updateQuantity = function(row, quantity){
     var index= parentRow.rowIndex;
     products[index-1].quantity=quantity;
 
-    console.log(products[index-1].quantity);
+    
 }
 
 var activateButtons= function(){
@@ -158,8 +158,20 @@ cont.onclick=function(){
 }
 var checkout= document.querySelector('#checkout');
 checkout.onclick=function(){
+    if(validEmail()){
     payWithPaystack();
     document.querySelector('.form').style.display="none";
+    }
+}
+function validEmail(){
+    var email = document.querySelector('#email-address').value;
+    if (/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(email))
+  {
+    return true;
+  }
+    else
+    alert("You have entered an invalid email address!")
+    return false;
 }
 
 var insertSummaryItems = function(){
