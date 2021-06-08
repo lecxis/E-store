@@ -3,7 +3,7 @@ products=[];
 var quantityActive=false;
 var table= document.querySelector('#table');
 var summaryTable= document.querySelector('#summary-table');
-var totalAmount;
+var totalAmount=0;
 
 var addCart=document.querySelectorAll('.cart-button');
 for(let but of addCart){
@@ -158,10 +158,16 @@ cont.onclick=function(){
 }
 var checkout= document.querySelector('#checkout');
 checkout.onclick=function(){
-    if(validEmail()){
+    console.log(totalAmount);
+    if (totalAmount<=0){
+        alert("Hello!! Your cart is empty. Add item to cart befor checking out!!");
+        return false;
+    }
+   else if(validEmail()){
     payWithPaystack();
     document.querySelector('.form').style.display="none";
     }
+    return false;
 }
 function validEmail(){
     var email = document.querySelector('#email-address').value;
@@ -169,8 +175,10 @@ function validEmail(){
   {
     return true;
   }
-    else
-    alert("You have entered an invalid email address!")
+    else{
+    alert("You have entered an invalid email address!");
+    return false;
+    }
     return false;
 }
 
