@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     </head>
-    <body>
-        <main>
-        <header>
+    <body >
+        <main  >
+        <header >
             <div class="logo">
                 <p>EMS</p>
             </div>
@@ -30,57 +30,59 @@
                 </div>
             </div>
         </header>
-        <div class="form">
-            <div class="table">
-                <table id="table">
-                <thead>
-                <tr>
-                    <th> S/N</th>
-                    <th>Item</th>
-                    <th>Price</th>
-                    <th> Quantity</th>
-                </tr>
-                </thead>
-                <tbody>
+        <div class="modal">
+            <div class="form">
+                <div class="table">
+                    <table id="table">
+                    <thead>
+                    <tr>
+                        <th> S/N</th>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th> Quantity</th>
+                    </tr>
+                    </thead>
+                    <tbody>
 
-                </tbody>
-                </table>
-            </div>
-            <form>
-                <div class="input-group">
-                <input type="text" placeholder="Full Name" required class="name" id='name'>
-                <input type="text" placeholder="Your Email" required class="e-mail" id="email-address">
-                <input type="number" placeholder="Your Phone Number" required id="phone-number">
+                    </tbody>
+                    </table>
                 </div>
-           
+                <form>
+                    <div class="input-group">
+                    <input type="text" placeholder="Full Name" required class="name" id='name'>
+                    <input type="text" placeholder="Your Email" required class="e-mail" id="email-address">
+                    <input type="number" placeholder="Your Phone Number" required id="phone-number">
+                    </div>
+            
 
-            <div class="amount">
-                <p class="amount-label">Total Amount to be Paid</p>
-                <p class="amount-cash">₦<span class="cash">0 </span></p>
+                <div class="amount">
+                    <p class="amount-label">Total Amount to be Paid</p>
+                    <p class="amount-cash">₦<span class="cash">0 </span></p>
+                </div>
+                <div class="but">
+                    <button class="continue"> Continue Shopping</button>
+                    <button class="checkout" id="checkout" type="submit"> Checkout</button>
+                </div>
+            </form>
             </div>
-            <div class="but">
-                <button class="continue"> Continue Shopping</button>
-                <button class="checkout" id="checkout" type="submit"> Checkout</button>
-            </div>
-        </form>
-        </div>
-        <div class="summary">
-            <p class="summary-text"> Thank You <span id="getName"> </span>,Your Order Has been Received</p>
-            <img src="img/check.svg" alt="Summary mage">
-            <p class="sum"> Summary</p>
-            <table id="summary-table">
-                <thead>
-                <tr>
-                    <th> S/N</th>
-                    <th>Item</th>
-                    <th> Quantity</th>
-                </tr>
-                </thead>
-                <tbody>
+            <div class="summary">
+                <p class="summary-text"> Thank You <span id="getName"> </span>,Your Order Has been Received</p>
+                <img src="img/check.svg" alt="Summary mage">
+                <p class="sum"> Summary</p>
+                <table id="summary-table">
+                    <thead>
+                    <tr>
+                        <th> S/N</th>
+                        <th>Item</th>
+                        <th> Quantity</th>
+                    </tr>
+                    </thead>
+                    <tbody>
 
-                </tbody>
-            </table>
-            <button class="summary-btn">Ok</button>
+                    </tbody>
+                </table>
+                <button class="summary-btn">Ok</button>
+            </div>
         </div>
 
         <div class="intro-body">
@@ -185,7 +187,7 @@
             <p>EMS</p>
         </div>
         <div class="foot-note">
-            <p>Designed and Crafted by a Olalekan</p>
+            <p>Designed and Crafted by Olalekan</p>
         </div>
     </footer>
     <script src="script.js"></script>

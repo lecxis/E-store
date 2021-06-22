@@ -81,7 +81,7 @@ var updateQuantity = function(row, quantity){
     var index= parentRow.rowIndex;
     products[index-1].quantity=quantity;
 
-    
+   
 }
 
 var activateButtons= function(){
@@ -150,28 +150,55 @@ var deleteItem= function(item){
 var cart= document.querySelector('.cart');
 cart.onclick=function(){
     document.querySelector('.form').style.display="block";
-    document.getElementsByTagName('main')[0].classList.add('modal');
+    document.querySelector('.modal').style.display="block";
 }
+
 var cont= document.querySelector('.continue');
-cont.onclick=function(){
-    document.querySelector('.form').style.display="none";
+cont.onclick=function(e){
+    e.preventDefault();
+   document.querySelector('.form').style.display="none";
+    document.querySelector('.modal').style.display="none";
 }
 var checkout= document.querySelector('#checkout');
 checkout.onclick=function(){
-    console.log(totalAmount);
     if (totalAmount<=0){
         alert("Hello!! Your cart is empty. Add item to cart befor checking out!!");
         return false;
     }
-   else if(validEmail()){
+   else if(validateName()&&validateEmail()&&validatePhone()){
+    modal.style.display = "none";
     payWithPaystack();
     document.querySelector('.form').style.display="none";
     }
     return false;
 }
-function validEmail(){
-    var email = document.querySelector('#email-address').value;
-    if (/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(email))
+var userName = document.querySelector('#name');
+function validateName(){ 
+    if (/^([\w]{3,})+\s+([\w\s]{3,})+$/i.test(userName.value))
+  {
+    return true;
+  }
+    else{
+    alert("You have entered an invalid name");
+    return false;
+    }
+    return false;
+}
+var phone = document.querySelector('#phone-number');
+function validatePhone(){
+    if (/^[0]\d{10}$/.test(phone.value))
+  {
+    return true;
+  }
+    else{
+    alert("You have entered an invalid phone number!");
+    return false;
+    }
+    return false;
+}
+var email = document.querySelector('#email-address');
+function validateEmail(){
+    if (/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(email.value))
   {
     return true;
   }
@@ -192,6 +219,8 @@ var removeCart= document.querySelectorAll('.remove-cart');
 var close= document.querySelector('.summary-btn');
 close.onclick=function(){
     document.querySelector('.summary').style.display="none";
+    summaryDisplay=false;
+    document.querySelector('.modal').style.display="none";
     clearTable();
     products=[];
     for(let but of removeCart){
@@ -203,9 +232,13 @@ close.onclick=function(){
     document.querySelector('.number').innerHTML=products.length;
     //clear summary table
     var rowCount = summaryTable.rows.length;
-    for (var i= rowCount-1; i>0; i--){
+    for (var i= rowCount-1; i>1; i--){
         table.deleteRow(i);
     }
+    //clear form 
+   userName.value="";
+    phone.value="";
+    email.value="";
 }
 function updateSummaryTable(index, name, quantity){
     var tr= summaryTable.insertRow(-1);
@@ -218,9 +251,18 @@ function updateSummaryTable(index, name, quantity){
     cell2.innerHTML=name;
      cell3.innerHTML=quantity;
 }
+var modal = document.querySelector('.modal');
+var summaryDisplay=false;
+// remove modal class by tapping any other part
+window.onclick = function(event) {
+    if (event.target == modal && !summaryDisplay) {
+      modal.style.display = "none";
+    }
+  }
 
 function payWithPaystack() {
    // e.preventDefault();
+   
     let handler = PaystackPop.setup({
       key: 'pk_test_5386c957f3981a75aa9494a3df7f3885fa81ce63', // Replace with your public key
       email: document.getElementById("email-address").value,
@@ -229,12 +271,16 @@ function payWithPaystack() {
       // label: "Optional string that replaces customer email"
       onClose: function(){
         alert('Window closed.');
+        modal.style.display = "none";
       },
       callback: function(response){
         let message = 'Payment complete! Reference: ' + response.reference;
         alert(message);
+        modal.style.display = "block";
         insertSummaryItems();
         document.querySelector('.summary').style.display="block";
+        summaryDisplay=true;
+        
       }
     });
     handler.openIframe();

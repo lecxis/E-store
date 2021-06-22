@@ -249,7 +249,7 @@ color: snow;
 /* Our Gadgets*/
 .gadgets{
     
-    padding: 5% 6% 20% 9%;
+    padding: 5% 6% 20% 6%;
     background:white;
     
 }
@@ -260,11 +260,14 @@ color: snow;
     }
 
     .gadgets .items{
-        display: flex;
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        justify-content: space-between;
         margin-top: 30px;
         padding:0;
         width: 100%;
         flex-wrap: wrap;
+        
        
     }
     .items .item{
@@ -272,12 +275,12 @@ color: snow;
         margin-left: auto;
         margin-bottom: 50px;
        
-        width: 230px;
+        width: 100%; /*230px;*/
         position: relative;
     }
 
     .item img{
-        max-width: 100%;
+        width: 100%;
         height: auto;  
     }
     .item .price{
@@ -374,10 +377,10 @@ color: snow;
             padding-right: 8%;
             padding-top: 20px;
         }
-        .items .item{
+       /* .items .item{
             margin-right: auto;
             margin-left: auto;
-    }
+    }*/
    .form, .summary{
        width:70%;
        left:10%;
@@ -386,14 +389,20 @@ color: snow;
     }
 
     @media (max-width: 850px) and (min-width:833px){
-        .items{
+       /* .items{
             justify-content: space-around;
         }
     .items .item{
         margin-right: 5px;
         margin-left: 5px;
         }
-       
+       */
+    }
+    @media (max-width: 850px) {
+       .gadgets .items{
+            grid-template-columns: 45% 45% ;
+            }
+
     }
 
     @media (max-width: 815px){
@@ -460,18 +469,31 @@ color: snow;
             margin-left: auto;
             margin-right: auto;
            }
-           .gadgets{
+           .gadgets .items{
+            grid-template-columns: 90%;
+            justify-content: center;
+            }
+            .items .item{
+                width:80%;
+            }
+            .item img{
+                
+               width: 100%;
+               height: auto;
+              
+            }
+           /*  .gadgets{
             padding: 5% 1% 20% 1%;
             
            }
-           .gadgets .items{
+         .gadgets .items{
             justify-content: center;
            }
            .items .item{
             margin-right: 10px;
             margin-left: 10px;
-    }
-           .gadgets .items .item .label{
+        }
+       */   .gadgets .items .item .label{
             font-size: 20px;
            }
            footer .logo p{
@@ -505,19 +527,7 @@ color: snow;
             margin-left: 4%;
         }   
     }
-    .modal{
-        position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-        
-        }
-
+    
         @media (max-width: 409px){
             .logo p{
                 font-size: 15px;
@@ -529,11 +539,47 @@ color: snow;
             .nav ul li{
                 padding-right: 10px;
             }
+            .store-name{
+                margin-top: 30px;
+                width: 100%;
+               padding-left: 15%;
+               font-size: 70%;
+            }
+            .shop-button{
+                width: 60%;
+            }
 
         }
         @media (max-width: 317px){
            header .logo {
-               display: none;
-                
+               display: none;       
             }
+        }
+.modal{
+      display: none;  
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            
+            }
+    
+        .modal{
+            
+          
+          
+        }
+        .form,.summary{
+            display: none;
+            width: 54%;
+            margin: auto;
+            background: white;
+            position: absolute;
+            left:23%;
+            top:2%;
         }
