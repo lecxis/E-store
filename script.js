@@ -231,9 +231,9 @@ close.onclick=function(){
     document.querySelector('.cash').innerHTML=totalAmount;
     document.querySelector('.number').innerHTML=products.length;
     //clear summary table
-    var rowCount = summaryTable.rows.length;
-    for (var i= rowCount-1; i>1; i--){
-        table.deleteRow(i);
+    var rowCount2 = summaryTable.rows.length;
+    for (var i= rowCount2-1; i>0; i--){
+        summaryTable.deleteRow(i);
     }
     //clear form 
    userName.value="";

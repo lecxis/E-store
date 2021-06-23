@@ -290,7 +290,7 @@ color: snow;
         display: block;
         background: black;
         opacity:0.5;
-        width:inherit;
+        width:100%;
         height: 70%;
         position: absolute;
         top:0;
@@ -431,6 +431,9 @@ color: snow;
             left:0%;
             margin-left: 5%;
         }
+        .form,.summary{
+            width:70%;
+        }
         
     }
     @media (max-width: 650px){
@@ -447,10 +450,15 @@ color: snow;
         footer .foot-note{
             margin-left: 7%;
         }
-        .form, .summary{
-            width: 96%;
+        .modal .form, .modal .summary{
+            width: 92%;
             margin-left: auto;
             margin-right:auto ;
+            left:4%;
+        }
+        .amount .amount-label{
+            font-weight: 600;
+            font-size: 15px;
         }
     }
     @media (max-width: 610px){
