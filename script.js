@@ -43,13 +43,13 @@ for(let but of removeCart){
 
 var insertItems = function(){
     products.forEach(function(value,index) {  
-        updateTable(index, value.name, value.price);
+        updateTable(index, value.name, value.price, value.quantity);
 
     });
     amount();
     document.querySelector('.number').innerHTML=products.length; 
 }
-var updateTable=function(index, name, price){
+var updateTable=function(index, name, price, quantity){
     
     var tr= table.insertRow(-1);
     var cell1=tr.insertCell(0);
@@ -63,7 +63,7 @@ var updateTable=function(index, name, price){
      cell3.innerHTML=price;
     cell4.innerHTML= `<div class="quantity">
     <button class='minus'>-</button>
-    <p class='number'>1</p>
+    <p class='number'>${quantity}</p>
     <button class='add'>+</button>
     </div>`;
     cell5.innerHTML="<button class='remove'>Remove</button>";
@@ -80,6 +80,7 @@ var updateQuantity = function(row, quantity){
     var parentRow = row.parentElement.parentElement.parentElement;
     var index= parentRow.rowIndex;
     products[index-1].quantity=quantity;
+   // console.log(products[index-1].name+ " "+products[index-1].quantity);
 
    
 }
@@ -95,6 +96,7 @@ var activateButtons= function(){
             this.nextElementSibling.innerHTML--;
             var quantity = this.nextElementSibling.innerHTML;
             updateQuantity(this, quantity);
+            
             amount();
             }
         }

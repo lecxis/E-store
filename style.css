@@ -426,14 +426,11 @@ color: snow;
         footer .foot-note{
             margin-left: 20%;
         }
-        .form, .summary{
-            width: 80%;
-            left:0%;
-            margin-left: 5%;
+        .modal .form, .modal .summary{
+            width: 70%;
+            left:15%;
         }
-        .form,.summary{
-            width:70%;
-        }
+        
         
     }
     @media (max-width: 650px){
@@ -523,6 +520,9 @@ color: snow;
         }
         .shop-button{
             width:40%;
+            font-size: 15px;
+        }
+        .about p{
             font-size: 15px;
         }
         footer .logo p{
